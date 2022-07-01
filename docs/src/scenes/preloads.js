@@ -1,4 +1,5 @@
 // Clase Preloads, para separar los preloads y tener mejor orden
+var nivel = 1
 export class Preloads extends Phaser.Scene { // Se extiende de Phaser.Scene porque es una escena
     constructor() {
         // Se asigna una key para despues poder llamar a la escena
@@ -17,7 +18,9 @@ export class Preloads extends Phaser.Scene { // Se extiende de Phaser.Scene porq
         this.load.spritesheet('dude', 'public/assets/images/dude.png', { frameWidth: 32, frameHeight: 48 });
         this.load.audio('death', 'public/assets/sounds/QUN.mp3');
         this.load.audio('song', 'public/assets/sounds/y2mate.com - The Binding of Isaac Afterbirth OST Burning Basement Theme.mp3');
-
+        this.load.tilemapTiledJSON('mapa1', 'public/assets/images/mapa1.json');
+        this.load.tilemapTiledJSON('mapa2', 'public/assets/images/mapa2.json');
+        this.load.image('plataforma', 'public/assets/images/96 platform.png');
     }
 
     create() {

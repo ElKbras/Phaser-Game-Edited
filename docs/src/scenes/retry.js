@@ -64,8 +64,22 @@ export class Retry extends Phaser.Scene {
   }
   update()
   {
+
     if (cursors.up.isDown)
-    {this.scene.start('Play');}
+    {
+      if (score >= 150)
+      {
+        this.scene.start('Play2');
+      }
+      else
+      {
+        this.scene.start('Play');
+      }
+      
+      
+  
+  
+    }
 
 
 

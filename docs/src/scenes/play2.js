@@ -14,10 +14,10 @@ var mapavisible
 
 
 // Clase Play, donde se crean todos los sprites, el escenario del juego y se inicializa y actualiza toda la logica del juego.
-export class Play extends Phaser.Scene {
+export class Play2 extends Phaser.Scene {
   constructor() {
     // Se asigna una key para despues poder llamar a la escena
-    super("Play");
+    super("Play2");
   }
 
   
@@ -39,7 +39,7 @@ export class Play extends Phaser.Scene {
     //  Now let's create some ledges
 
 
-    mapa1 = this.make.tilemap({key:"mapa1"})
+    mapa1 = this.make.tilemap({key:"mapa2"})
     mapaImagen = mapa1.addTilesetImage("96 platform", "plataforma", 32, 32)
 
     mapavisible = mapa1.createLayer('Tile Layer 1', mapaImagen)
